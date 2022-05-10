@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  estimation:
+    container_name: estimation
+    image: ntp/estimation
+    working_dir: /var/www/html
+    entrypoint: /bin/sh
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./estimation/:/var/www/html
+    tty: true
